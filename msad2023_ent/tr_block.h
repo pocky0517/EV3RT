@@ -1,3 +1,4 @@
+/*右コース*/
 #define TR_BLOCK_R \
         .composite<BrainTree::ParallelSequence>(1,2) \
             .leaf<IsBackOn>() \
