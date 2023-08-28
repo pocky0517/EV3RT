@@ -15,7 +15,7 @@
                     .leaf<TraceLine>(70, GS_TARGET, P_CONST, I_CONST, D_CONST, 0.0, TS_NORMAL) \
                 .end() \
                 \
-
+/*左コース*/
 #define TR_BLOCK_L \
         .composite<BrainTree::ParallelSequence>(1,2) \
             .leaf<IsBackOn>() \
