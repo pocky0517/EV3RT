@@ -9,13 +9,11 @@
 /* Reset Arm Pos. \
                 .leaf<SetArmPosition>(ARM_INITIAL_ANGLE, ARM_SHIFT_PWM) \
 */ \
-                .composite<BrainTree::ParallelSequence>(1,3) \
-                    .leaf<IsSonarOn>(300) \
-                    .leaf<IsTimeEarned>(7290000) \
-                    .leaf<RunAsInstructed>(20, 20, 0.5) \
+                .composite<BrainTree::ParallelSequence>(1,2) \
+                    .leaf<IsTimeEarned>(20500000) \
+                    .leaf<TraceLine>(70, GS_TARGET, P_CONST, I_CONST, D_CONST, 0.0, TS_NORMAL) \
                 .end() \
-            .end() \
-        .end()
+                \
 
 #define TR_BLOCK_L \
         .composite<BrainTree::ParallelSequence>(1,2) \
